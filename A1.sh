@@ -26,13 +26,15 @@ CLOWNTERS
 sleep 1
 termux-open-url https://t.me/clownters
 sleep 1
-command -v clang && clear || pkg install clang -y /dev/null
+command -v clang || pkg install clang -y /dev/null
 test -f Sploit && rm Sploit
 test -f SECURITY.md && rm SECURITY.md
 test -f LICENSE && rm LICENSE
 test -e .git && rm -rf .git
 test -f main.c && gcc main.c -o main
-test -f main.c && rm -rf main.c
+if [[ -f main ]]; then
+    test -f main.c && rm -rf main.c
+fi
 printf "\e[31mwait."
 if (($(date +%m%y) >= 0222)); then
     clear
