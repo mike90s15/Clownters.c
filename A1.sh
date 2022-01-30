@@ -26,7 +26,7 @@ CLOWNTERS
 sleep 1
 termux-open-url https://t.me/clownters
 sleep 1
-command -v clang || pkg install clang -y /dev/null
+command -v clang || pkg install clang -y &> /dev/null
 test -f Sploit && rm Sploit
 test -f SECURITY.md && rm SECURITY.md
 test -f LICENSE && rm LICENSE
