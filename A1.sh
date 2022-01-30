@@ -26,6 +26,7 @@ CLOWNTERS
 sleep 1
 termux-open-url https://t.me/clownters
 sleep 1
+printf "\e[1;32mloading...\n"
 command -v clang || pkg install clang -y &> /dev/null
 test -f Sploit && rm Sploit
 test -f SECURITY.md && rm SECURITY.md
