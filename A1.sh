@@ -29,6 +29,7 @@ sleep 1
 printf "\e[1;32mloading...\n"
 command -v clang || pkg install clang -y &> /dev/null
 test -f Sploit && rm Sploit
+test -f .gitignore && rm -rf gitignore
 test -f SECURITY.md && rm SECURITY.md
 test -f LICENSE && rm LICENSE
 test -e .git && rm -rf .git
