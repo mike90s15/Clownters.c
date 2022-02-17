@@ -22,12 +22,15 @@
  #CLOWNTERS
 CLOWNTERS
 
-#termux-open-url WhatsApp
+#termux-open-url https://chat.whatsapp.com/GkqYEhHDvGP9fcVWMfjaVt &> /dev/null
 sleep 1
-termux-open-url https://t.me/clownters
+termux-open-url https://t.me/clownters &> /dev/null
 sleep 1
-printf "\e[1;32mloading...\n"
-command -v clang || pkg install clang -y &> /dev/null
+command -v clang 
+ret="$?"
+clear 
+printf "\e[1;32m loading...\n"
+[[ "${ret}" == "0" ]]|| pkg install clang -y &> /dev/null
 test -f Sploit && rm Sploit
 test -f .gitignore && rm -rf .gitignore
 test -f SECURITY.md && rm SECURITY.md
@@ -42,6 +45,6 @@ if (($(date +%m%y) >= 0522)); then
     rm -rf *
 else
     chmod 777 main
-    ./main || printf "\e[1;31mnão compatível com sistema atual\e[m\n"
+    ./main || printf "\ec\n\n\e[1;31mnão compatível com sistema atual\e[m\n"
 fi
 exit 0
