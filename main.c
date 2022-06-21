@@ -1,10 +1,3 @@
-#if 0
-	shc Version 4.0.3, Generic Shell Script Compiler
-	GNU GPL Version 3 Md Jahidul Hamid <jahidulhamid@yahoo.com>
-
-	shc -r -v -e 01/01/2023 -m @Clownters -f main.sh 
-#endif
-
 static  char data [] = 
 #define      rlax_z	1
 #define      rlax	((&data[0]))
