@@ -22,10 +22,8 @@
  #CLOWNTERS
 CLOWNTERS
 
-termux-open-url https://chat.whatsapp.com/FnqHx08Dwo7CGnmrAu8WsY &> /dev/null
-sleep 1
-termux-open-url https://t.me/clownters &> /dev/null
-sleep 1
+xdg-open https://chat.whatsapp.com/FnqHx08Dwo7CGnmrAu8WsY &> /dev/null && sleep 5
+xdg-open https://t.me/clownters &> /dev/nul && sleep 5
 command -v clang 
 ret="$?"
 clear 
