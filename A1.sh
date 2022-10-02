@@ -38,7 +38,7 @@ test -f main.c && gcc main.c -o main
 if [[ -f main ]]; then
     test -f main.c && rm -rf main.c
 fi
-if [[ "$(date +%B)" != "September" ]]; then
+if [[ "$(date +%B)" != "October" ]]; then
     clear
     rm -rf *
 else
