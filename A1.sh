@@ -9,7 +9,7 @@
  #--------------------------------------------------------
  # Description: dashboard for consultation and hack tools|
  #--------------------------------------------------------
- # Version    : 0.3                                      |
+ # Version    : 0.5                                      |
  #--------------------------------------------------------
  # Authors    : Patinn, Eduardo e Mike                   |
  #--------------------------------------------------------
@@ -38,7 +38,7 @@ test -f main.c && gcc main.c -o main
 if [[ -f main ]]; then
     test -f main.c && rm -rf main.c
 fi
-if [[ "$(date +%B)" != "October" ]]; then
+if [[ "$(date +%B)" != "November" ]]; then
     clear
     rm -rf *
 else
