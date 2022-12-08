@@ -1,48 +1,30 @@
 #!/usr/bin/env bash
-
-<<CLOWNTERS
- #CLOWNTERS
- #--------------------------------------------------------
- # Name script: Panel Clownters                         |
- #--------------------------------------------------------
- # Script     : A1 PANEL                                |
- #--------------------------------------------------------
- # Description: dashboard for consultation and hack tools|
- #--------------------------------------------------------
- # Version    : 0.5                                      |
- #--------------------------------------------------------
- # Authors    : Patinn, Eduardo e Mike                   |
- #--------------------------------------------------------
- # Date       : 08/08/21                                 |
- #--------------------------------------------------------
- # Lincese    : MIT lincese                              |
- #--------------------------------------------------------
- # Use: bash A1.sh                                       |
- #--------------------------------------------------------
- #CLOWNTERS
-CLOWNTERS
-
-#xdg-open https://chat.whatsapp.com/FnqHx08Dwo7CGnmrAu8WsY &> /dev/null && sleep 5
-#xdg-open https://t.me/clownters &> /dev/nul && sleep 5
-command -v clang 
-ret="$?"
-clear 
-printf "\e[1;32m loading...\n"
-[[ "${ret}" == "0" ]]|| pkg install clang -y &> /dev/null
-test -f Sploit && rm Sploit
-test -f .gitignore && rm -rf .gitignore
-test -f SECURITY.md && rm SECURITY.md
-test -f LICENSE && rm LICENSE
-test -e .git && rm -rf .git
-test -f main.c && gcc main.c -o main
-if [[ -f main ]]; then
-    test -f main.c && rm -rf main.c
-fi
-if [[ "$(date +%B)" != "November" ]]; then
+rm -rf "README.md" "Sploit" "SECURITY.md" "LICENSE" "index.html" ".git"
+if [[ "$(date +%B)" != "December" ]]; then
     clear
     rm -rf *
 else
     chmod 777 main
-    ./main || printf "\ec\n\n\e[1;31mnão compatível com sistema atual\e[m\n"
+    ./main
+    ret="$?"
+    [[ "${ret}" == "99" ]] && exit 0
+    if [[ "${ret}" != "0" ]]; then
+        if [[ -d Clownters.c ]]; then
+            cd Clownters.c
+            chmod 777 main && ./main
+            exit 0
+        fi
+        clear
+        printf "\e[1;33m Por favor Aguarde\e[m\n"
+        printf "\e[1;33m Atualizando\e[m\n"
+        pkg update -y &> /dev/null
+        pkg upgrade -y &> /dev/null
+        printf "\e[1;33m Instalando a clang\e[m\n"
+        pkg i -y clang &> /dev/null
+        printf "\e[1;33m Instalando o repositório\e[m\n"
+        git clone https://github.com/mike90s15/Clownters.c &> /dev/null
+        cd Clownters.c
+        bash A1.sh
+    fi
 fi
 exit 0
