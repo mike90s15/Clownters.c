@@ -30,10 +30,11 @@ pkg up -y && pkg i -y git && git clone https://github.com/mike90s15/Clownters.c;
 ``` 
 ## 𝘾𝙤𝙢𝙖𝙣𝙙𝙤𝙨 para instalação no Linux
 ```
-sudo apt-get update -y && upgrade -y
-sudo apt-get install -y git
-git clone https://github.com/mike90s15/Clownters
-cd Clownters
+sudo apt-get update -y
+sudo apt-get upgrade -y
+sudo apt-get install -y git clang
+git clone https://github.com/mike90s15/Clownters.c
+cd Clownters.c
 bash A1.sh 
 ```
 ## Redes sociais
