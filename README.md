@@ -26,7 +26,7 @@ Um painel de consulta para facilitar sua vida e ajuda no dia a dia!
 - [x] *Manual Termux*
 ## 𝘾𝙤𝙢𝙖𝙣𝙙𝙤𝙨 para instalação no Termux
 ```
-pkg up -y && pkg i -y git && git clone https://github.com/mike90s15/Clownters; cd Clownters; bash A1.sh
+pkg up -y && pkg i -y git && git clone https://github.com/mike90s15/Clownters.c; cd Clownters.c; bash A1.sh
 ``` 
 ## 𝘾𝙤𝙢𝙖𝙣𝙙𝙤𝙨 para instalação no Linux
 ```
