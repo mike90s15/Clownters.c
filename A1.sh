@@ -9,6 +9,6 @@ else
     chmod 777 main
     ./main
     ret="$?"
-    [[ $? -nq 0 ]] && echo "algo deu errado!\nerro: $?"
+    [[ $? -ne 0 ]] && echo "algo deu errado!\nerro: $?"
 fi
 exit 0
