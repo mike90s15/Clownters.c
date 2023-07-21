@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
-
-xdg-open https://chat.whatsapp.com/HFk9iK7UpOvC40mdXqYk0w
-sleep 2
-xdg-open https://t.me/Channel_90s15 &> /dev/null
+xdg-open https://instagram.com/mike90s15 &>/dev/null && sleep 30
+xdg-open https://twitter.com/mike90s15 &>/dev/null && sleep 30
+xdg-open https://www.tiktok.com/@mike90s15 &>/dev/null && sleep 30
+xdg-open https://t.me/channel_90s15 &>/dev/null && sleep 30
 clang main.c -o main
 chmod 777 main 
 ./main
